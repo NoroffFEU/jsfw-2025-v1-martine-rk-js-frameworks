@@ -14,7 +14,7 @@ export default function Footer() {
             className="object-cover"
           />
         </div>
-        <div className="w-full h-fit flex gap-6 md:gap-16 lg:gap-6 md:justify-end items-center text-[1.125rem] md:flex-row flex-col">
+        <div className="w-full h-fit flex gap-6 md:gap-16 lg:gap-6 md:justify-end items-center text-[1.125rem] md:flex-row flex-col break-all">
           <div className="flex flex-col lg:flex-row lg:gap:16 gap-6 lg:text-center text-left">
             <Link href="/pages/sustainability">Sustainability</Link>
             <Link href="/pages/about">About us</Link>
@@ -25,7 +25,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="w-full h-fit p-8 text-[0.75rem]">
+      <div className="w-full h-fit p-8 text-[0.75rem] break-all">
         <p>
           &copy; {new Date().getFullYear()} The Selection store. All rights
           reserved.
