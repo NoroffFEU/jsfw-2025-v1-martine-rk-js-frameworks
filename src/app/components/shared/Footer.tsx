@@ -1,6 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 
+/**
+ * Footer component
+ *
+ * Displays the website footer with: logo, navigation links (sustainability, about us, contact us and terms of use) and copyright information.
+ * @returns The Footer UI
+ */
 export default function Footer() {
   return (
     <footer className="w-full h-fit p-2 bg-footer text-charcoal text-center flex flex-col  justify-center items-center">
