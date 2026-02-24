@@ -10,7 +10,7 @@ import Image from "next/image";
  */
 export default function TermsOfUse() {
   return (
-    <div className="min-h-screen flex flex-col items-center pt-26 md:px-20 break-all">
+    <div className="min-h-screen flex flex-col items-center pt-26 md:px-20 break-all sm:break-normal px-4">
       <div className="flex flex-col max-w-180 w-full gap-6">
         <h1 className="text-[1.75rem] text-center">Terms of use</h1>
         <p>
@@ -20,7 +20,7 @@ export default function TermsOfUse() {
         </p>
 
         <div>
-          <ul className="list-decimal w-full px-16 flex flex-col gap-4">
+          <ul className="list-decimal w-full px-8 md:px-16 flex flex-col gap-4">
             <li>
               Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut
               hendrerit semper vel class aptent taciti sociosqu. Ad litora

@@ -10,7 +10,7 @@ import Image from "next/image";
  */
 export default function Sustainability() {
   return (
-    <div className="min-h-screen flex flex-col items-center pt-26 md:px-20 break-all">
+    <div className="min-h-screen flex flex-col items-center pt-26 md:px-20 break-all md:break-normal px-4">
       <div className="flex flex-col max-w-180 w-full gap-6">
         <h1 className="text-[1.75rem] text-center">Sustainability</h1>
         <p>
