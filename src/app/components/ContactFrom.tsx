@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
  * ContactForm component
  *
  * A simple contact form that lets users send a message.
- * The form gets the user's name, email, title and message.
+ * The form gets the user's fullName, email, subject and message.
  * Validates input fields to ensure they are all filled, email is valid and the message is at least 10 characters.
  * If a field is incorrect a toast message will show.
  *
@@ -22,14 +22,14 @@ export const ContactForm = () => {
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const name = (
-      form.current?.elements.namedItem("name") as HTMLInputElement
+    const fullName = (
+      form.current?.elements.namedItem("full_name") as HTMLInputElement
     ).value.trim();
     const email = (
       form.current?.elements.namedItem("email") as HTMLInputElement
     ).value.trim();
-    const title = (
-      form.current?.elements.namedItem("title") as HTMLInputElement
+    const subject = (
+      form.current?.elements.namedItem("subject") as HTMLInputElement
     ).value.trim();
     const message = (
       form.current?.elements.namedItem("message") as HTMLTextAreaElement
@@ -37,11 +37,17 @@ export const ContactForm = () => {
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if (!name || !email || !title || !message) {
+    if (!fullName || !email || !subject || !message) {
       toast.error("All fields are required.");
+      return;
+    } else if (fullName.length < 3) {
+      toast.error("Full name must be at least 3 characters.");
       return;
     } else if (!emailRegex.test(email)) {
       toast.error("Please enter a valid email.");
+      return;
+    } else if (subject.length < 3) {
+      toast.error("Subject must be at least 3 characters.");
       return;
     } else if (message.length < 10) {
       toast.error("Message must be at least 10 characters.");
@@ -79,13 +85,14 @@ export const ContactForm = () => {
       </h2>
 
       <label>
-        Name<span className="text-red-700">*</span>
+        Full Name<span className="text-red-700">*</span>
       </label>
       <input
         type="text"
-        name="name"
+        name="full_name"
         className="bg-white rounded-md p-2 border border-gray-500"
-        title="name"
+        title="Full name"
+        placeholder="Full name"
         required
       />
       <label>
@@ -96,16 +103,18 @@ export const ContactForm = () => {
         name="email"
         className="bg-white rounded-md p-2 border border-gray-500"
         title="email"
+        placeholder="Email"
         required
       />
       <label>
-        Title<span className="text-red-700">*</span>
+        Subject<span className="text-red-700">*</span>
       </label>
       <input
         type="text"
-        name="title"
+        name="subject"
         className="bg-white rounded-md p-2 border border-gray-500"
-        title="title"
+        title="subject"
+        placeholder="Subject"
         required
       />
       <label>
