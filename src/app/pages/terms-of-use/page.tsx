@@ -4,7 +4,7 @@ import Image from "next/image";
 /**
  * Terms of use page.
  *
- * Shows title, a list with Lorem Ipsum generated placeholder text and logo signature.
+ * Displays title, a list with Lorem Ipsum generated placeholder text and logo signature.
  *
  * @returns The Terms of use page
  */

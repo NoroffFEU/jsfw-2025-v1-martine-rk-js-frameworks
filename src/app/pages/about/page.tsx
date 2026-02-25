@@ -4,7 +4,7 @@ import Image from "next/image";
 /**
  * About us page
  *
- * Shows title, our history with Lorem Ipsum generated placeholder text and logo signature.
+ * Displays title, our history with Lorem Ipsum generated placeholder text and logo signature.
  *
  * @returns The About us page
  */

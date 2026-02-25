@@ -5,7 +5,7 @@ import ContactForm from "@/app/components/ContactFrom";
 /**
  * Contact us page.
  *
- * Shows title, contact information, opening hours, the ContactForm component and logo signature.
+ * Displays title, contact information, opening hours, the ContactForm component and logo signature.
  *
  * @returns The Contact us page
  */

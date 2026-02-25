@@ -4,7 +4,7 @@ import Image from "next/image";
 /**
  * Sustainability page.
  *
- * Shows title, our mission with Lorem Ipsum generated placeholder text and logo signature.
+ * Displays title, our mission with Lorem Ipsum generated placeholder text and logo signature.
  *
  * @returns The Sustainability page
  */
