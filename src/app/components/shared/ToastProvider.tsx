@@ -4,7 +4,7 @@ import { Toaster } from "react-hot-toast";
 /**
  * ToastProvider sets up a toast notification system for the website.
  *
- * @returns A toaster componet that shows notifications in the top right corner.
+ * @returns A toaster componet that displays notifications in the top right corner.
  */
 export default function ToastProvider() {
   return (
