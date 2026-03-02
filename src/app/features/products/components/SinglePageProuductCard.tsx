@@ -1,11 +1,11 @@
 import React from "react";
 import Image from "next/image";
 import { Product } from "@/app/interfaces/product";
-import { Star, Percent, ShoppingCart } from "lucide-react";
+import { Star, ShoppingCart, BadgePercent } from "lucide-react";
 import BackButton from "@/app/components/BackButton";
 
 /**
- * SinglePageProductCard component
+ * SinglePageProduct component
  *
  * Displays image, title, ratings, price, description, tags, "Add to cart" button, reviews.
  * Displays "% Discount" on top right of the image if the product has a discount.
@@ -33,8 +33,11 @@ export default function SinglePageProduct({ product }: { product: Product }) {
           />
 
           {hasDiscount && (
-            <p className="absolute text-[0.8rem] md:text-[1rem] top-2 right-2 bg-red-700 px-2 py-1 xs:px-4 xs:py-2 flex items-center gap-2 text-white rounded-full">
-              <Percent /> Discount
+            <p
+              className="absolute top-2 right-2 bg-red-700 p-2 flex items-center gap-2 text-white rounded-full"
+              title="Discount"
+            >
+              <BadgePercent size={20} />
             </p>
           )}
         </div>

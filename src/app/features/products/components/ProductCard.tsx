@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Star, Percent, ShoppingCart } from "lucide-react";
+import { Star, ShoppingCart, BadgePercent } from "lucide-react";
 import { Product } from "@/app/interfaces/product";
 
 /**
@@ -29,8 +29,11 @@ export default function ProductCard({ product }: { product: Product }) {
           />
 
           {hasDiscount && (
-            <p className="absolute text-[0.8rem] md:text-[1rem] top-4 right-4 bg-red-700 px-4 py-2 flex items-center gap-2 text-white rounded-full">
-              <Percent /> Discount
+            <p
+              className="absolute top-2 right-2 bg-red-700 p-2 flex items-center gap-2 text-white rounded-full"
+              title="Discount"
+            >
+              <BadgePercent size={20} />
             </p>
           )}
         </div>
