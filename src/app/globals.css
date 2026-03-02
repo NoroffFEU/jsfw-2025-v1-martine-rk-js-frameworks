@@ -10,6 +10,12 @@
   --color-secondary: rgb(51, 51, 51);
   --color-footer: rgb(234, 234, 227);
   --color-charcoal: rgb(34, 34, 34);
+  --breakpoint-xl2: 1300px;
+  --breakpoint-m2: 900px;
+  --breakpoint-m3: 550px;
+  --breakpoint-xs: 390px;
+  --breakpoint-xxs: 290px;
+  --text-banner: clamp(1.5rem, 8vw, 4rem);
 }
 
 .active {
