@@ -69,7 +69,7 @@ export function useProductFilters(products: Product[]) {
 
   const handlePageChange = (pageNumber: number) => {
     if (pageNumber >= 1 && pageNumber <= totalPages) {
-      setCurrentPage(1);
+      setCurrentPage(pageNumber);
     }
   };
   return {
