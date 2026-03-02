@@ -10,7 +10,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="w-full h-fit p-2 bg-footer text-charcoal text-center flex flex-col  justify-center items-center">
-      <div className="max-w-400 w-full h-fit flex md:flex-row flex-col md:justify-between items-center px-10 py-16 gap-16 md:gap-0">
+      <div className="max-w-400 w-full h-fit flex md:flex-row flex-col md:justify-between items-center px-4 sm:px-10 py-16 gap-16 md:gap-0">
         <div className="w-fit h-fit">
           <Image
             src="/../logo/The-Selection.svg"
