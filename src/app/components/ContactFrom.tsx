@@ -78,9 +78,9 @@ export const ContactForm = () => {
     <form
       ref={form}
       onSubmit={sendEmail}
-      className="flex flex-col w-full max-w-100 min-h-100 bg-white text-[#22223b] p-4 sm:p-8 rounded-2xl gap-2 border border-gray-300 shadow-xl"
+      className="flex flex-col w-full max-w-110 min-h-100 bg-white text-[#22223b] p-4 xs:p-8 rounded-2xl gap-2 border border-gray-300 shadow-xl"
     >
-      <h2 className="text-center font-bold text-[1.375rem]">
+      <h2 className="text-center font-bold text-[1.375rem] break-all xs:break-normal">
         Send us a message
       </h2>
 
