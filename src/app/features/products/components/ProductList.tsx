@@ -71,7 +71,7 @@ export default function ProductList({ products }: { products: Product[] }) {
             </div>
             <div>
               <label htmlFor="price-range font-bold">
-                <strong>Maks price </strong>($ {maxPrice}):{" "}
+                <strong>Max price </strong>(${maxPrice}):{" "}
               </label>
               <input
                 title="Price range"
