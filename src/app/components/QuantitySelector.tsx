@@ -1,6 +1,9 @@
 "use client";
 /**
- * QuantitySelector displays buttons to increase or decrease number.
+ * QuantitySelector component
+ *
+ * QuantitySelector displays "+" and "-" buttons to increase or decrease number.
+ * Disable button to never go below 1.
  *
  * @returns The quantity controls UI
  */
@@ -23,13 +26,13 @@ export default function QuantitySelector({
       <button
         onClick={handleDecrement}
         disabled={quantity <= 1}
-        className="px-4 py-2 cursor-pointer"
+        className="px-3 py-2 cursor-pointer"
       >
         -
       </button>
       <span className="w-6 text-center font-semibold">{quantity}</span>
 
-      <button onClick={handleIncrement} className="px-4 py-2 cursor-pointer">
+      <button onClick={handleIncrement} className="px-3 py-2 cursor-pointer">
         +
       </button>
     </div>
