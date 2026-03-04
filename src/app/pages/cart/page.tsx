@@ -142,7 +142,7 @@ export default function CartPage() {
               onClick={handleCheckout}
               className="flex w-full items-center justify-center px-8 py-2 bg-charcoal text-white gap-2 rounded-full cursor-pointer border border-charcoal hover:text-charcoal hover:bg-white active:scale-95"
             >
-              Send order
+              Checkout
             </button>
           </div>
         </div>
