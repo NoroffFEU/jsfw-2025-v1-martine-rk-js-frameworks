@@ -29,9 +29,17 @@ export default async function SingleProductPage({
 
   if (!response.ok) {
     if (response.status === 404) {
-      return <p>Could not find product with id: {productId}.</p>;
+      return (
+        <div className="flex h-screen items-center justify-center text-red-700">
+          <p>Could not find product with id: {productId}.</p>
+        </div>
+      );
     }
-    return <p>Could not load the product. Try again later.</p>;
+    return (
+      <div className="flex  h-screen items-center justify-center text-red-700">
+        <p>Could not load the product. Try again later.</p>
+      </div>
+    );
   }
 
   const result: ApiSingleProductResponse = await response.json();
