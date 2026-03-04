@@ -12,15 +12,23 @@ import { Product, ApiResponse } from "@/app/interfaces/product";
  * @returns The rendered ProductList component with the fetched products.
  */
 export default async function Products() {
-  const response = await fetch(`https://v2.api.noroff.dev/online-shop`, {
-    next: { revalidate: 3600 },
-  });
-  if (!response.ok) {
-    throw new Error("Failed to fetch products");
+  try {
+    const response = await fetch(`https://v2.api.noroff.dev/online-shop`, {
+      next: { revalidate: 3600 },
+    });
+    if (!response.ok) {
+      throw new Error("Failed to fetch products");
+    }
+
+    const result: ApiResponse = await response.json();
+    const products: Product[] = result.data;
+
+    return <ProductList products={products} />;
+  } catch {
+    return (
+      <div className="flex pb-10 text-red-700">
+        <p>Could not load the products. Try again later.</p>
+      </div>
+    );
   }
-
-  const result: ApiResponse = await response.json();
-  const products: Product[] = result.data;
-
-  return <ProductList products={products} />;
 }
