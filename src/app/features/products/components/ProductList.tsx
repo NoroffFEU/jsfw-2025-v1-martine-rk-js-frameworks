@@ -102,7 +102,12 @@ export default function ProductList({ products }: { products: Product[] }) {
               className="w-full pl-10 pr-4 py-2 rounded-full border border-gray-300"
             />
           </div>
-          <h2 className="text-[1.5rem] text-charcoal mt-4">Products</h2>
+          <div>
+            <h2 className="text-[1.5rem] text-charcoal mt-4">Products</h2>
+            <p>
+              &#40;Showing page {currentPage} of {totalPages}&#41;
+            </p>
+          </div>
           {currentItems.length > 0 ? (
             <ul className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
               {currentItems.map((product) => (
