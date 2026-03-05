@@ -1,14 +1,15 @@
 import React from "react";
 import Image from "next/image";
 import { Product } from "@/app/interfaces/product";
-import { Star, ShoppingCart, BadgePercent } from "lucide-react";
+import { Star, BadgePercent } from "lucide-react";
 import BackButton from "@/app/components/BackButton";
+import QuantityAndAddToCartButtons from "@/app/components/QuantityAndAddToCart";
 
 /**
  * SinglePageProduct component
  *
  * Displays image, title, ratings, price, description, tags, "Add to cart" button, reviews.
- * Displays "% Discount" on top right of the image if the product has a discount.
+ * Calculates and displays "%" icon and discount percentage on the top right of the product image, if the product has an discount.
  * Displays current price and before price in lighter gray with strike through.
  *
  * @returns The single page product UI
@@ -16,6 +17,14 @@ import BackButton from "@/app/components/BackButton";
 export default function SinglePageProduct({ product }: { product: Product }) {
   const hasDiscount =
     product.discountedPrice != null && product.discountedPrice < product.price;
+
+  const discountPercentage =
+    product.discountedPrice && product.price > 0
+      ? (
+          ((product.price - product.discountedPrice) / product.price) *
+          100
+        ).toFixed(0)
+      : 0;
 
   return (
     <div className="max-w-150 lg:max-w-300 flex flex-col items-center">
@@ -38,6 +47,7 @@ export default function SinglePageProduct({ product }: { product: Product }) {
               title="Discount"
             >
               <BadgePercent size={20} />
+              <strong> {discountPercentage}%</strong>
             </p>
           )}
         </div>
@@ -50,7 +60,7 @@ export default function SinglePageProduct({ product }: { product: Product }) {
               </div>
               <div className="w-full flex gap-2 items-center justify-end">
                 <p className="flex items-center gap-2">
-                  <Star fill="yellow" className="text-yellow-200" />
+                  <Star fill="#e7c936" className="text-[#e7c936]" />
                   {product.rating}
                 </p>
                 <p className="text-gray-500 text-[0.875rem]">
@@ -73,7 +83,7 @@ export default function SinglePageProduct({ product }: { product: Product }) {
           </div>
           <div className="flex flex-col gap-4">
             <div>
-              <h2 className="font-bold">DESCREPTION</h2>
+              <h2 className="font-bold">DESCRIPTION</h2>
               <p>{product.description}</p>
             </div>
             <p className="flex flex-wrap gap-2">
@@ -91,14 +101,7 @@ export default function SinglePageProduct({ product }: { product: Product }) {
           </div>
 
           <div className="flex xs:flex-row flex-col w-full justify-between gap-2">
-            <button
-              type="button"
-              aria-label="Add to cart"
-              className="flex w-full items-center justify-center px-8 py-2 bg-charcoal text-white gap-2 rounded-full cursor-pointer border border-charcoal hover:bg-white hover:text-charcoal active:scale-95"
-            >
-              <ShoppingCart />
-              Add to cart
-            </button>
+            <QuantityAndAddToCartButtons product={product} />
           </div>
         </div>
       </div>
