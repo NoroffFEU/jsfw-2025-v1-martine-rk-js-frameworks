@@ -69,7 +69,7 @@ export default function ProductList({ products }: { products: Product[] }) {
                 <option value="z-to-a">Z to A</option>
               </select>
             </div>
-            <div>
+            <div className="mt-4">
               <label htmlFor="price-range font-bold">
                 <strong>Max price </strong>(${maxPrice}):{" "}
               </label>
