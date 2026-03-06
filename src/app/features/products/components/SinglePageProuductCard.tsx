@@ -4,27 +4,18 @@ import { Product } from "@/app/interfaces/product";
 import { Star, BadgePercent } from "lucide-react";
 import BackButton from "@/app/components/BackButton";
 import QuantityAndAddToCartButtons from "@/app/components/QuantityAndAddToCart";
-
+import getDiscountInfo from "../../../utils/getDiscountInfo";
 /**
  * SinglePageProduct component
  *
- * Displays image, title, ratings, price, description, tags, "Add to cart" button, reviews.
+ * Displays image, title, ratings, price, description, tags, quantity selector and "Add to cart" button, reviews.
  * Calculates and displays "%" icon and discount percentage on the top right of the product image, if the product has an discount.
  * Displays current price and before price in lighter gray with strike through.
  *
  * @returns The single page product UI
  */
 export default function SinglePageProduct({ product }: { product: Product }) {
-  const hasDiscount =
-    product.discountedPrice != null && product.discountedPrice < product.price;
-
-  const discountPercentage =
-    product.discountedPrice && product.price > 0
-      ? (
-          ((product.price - product.discountedPrice) / product.price) *
-          100
-        ).toFixed(0)
-      : 0;
+  const { hasDiscount, discountPercentage } = getDiscountInfo(product);
 
   return (
     <div className="max-w-150 lg:max-w-300 flex flex-col items-center">
@@ -37,6 +28,7 @@ export default function SinglePageProduct({ product }: { product: Product }) {
             src={product.image.url || "/images/No-image-available.svg"}
             alt={product.image.alt || product.title}
             className="w-full object-contain rounded-md"
+            loading="lazy"
             height={400}
             width={600}
           />
