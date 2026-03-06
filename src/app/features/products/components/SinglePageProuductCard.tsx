@@ -18,7 +18,7 @@ export default function SinglePageProduct({ product }: { product: Product }) {
   const { hasDiscount, discountPercentage } = getDiscountInfo(product);
 
   return (
-    <div className="max-w-150 lg:max-w-300 flex flex-col items-center">
+    <div className="w-full max-w-150 lg:max-w-300 flex flex-col items-center">
       <div className="w-full h-fit flex items-center mb-6 mt-2">
         <BackButton />
       </div>
@@ -106,8 +106,14 @@ export default function SinglePageProduct({ product }: { product: Product }) {
                 key={review.id}
                 className="bg-white text-black px-2 py-1 rounded-md border border-gray-400 text-center"
               >
-                {review.description}
-                <br />- {review.username}
+                <span className="flex w-full justify-center gap-2">
+                  <Star fill="#e7c936" className="text-[#e7c936]" />
+                  {review.rating}
+                </span>
+                <div className="flex-col flex w-full">
+                  <span>{review.description}</span>{" "}
+                  <span>- {review.username}</span>
+                </div>
               </span>
             ))
           ) : (
