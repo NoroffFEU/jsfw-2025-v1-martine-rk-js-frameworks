@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import React, { useState } from "react";
 import { Menu } from "lucide-react";
+import useCartStore from "@/app/stores/cartstore";
 
 /**
  * Navigation component
@@ -15,6 +16,8 @@ import { Menu } from "lucide-react";
 export default function Navigation() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const items = useCartStore((state) => state.items);
+  const totalItems = items.reduce((total, item) => total + item.quantity, 0);
 
   return (
     <>
@@ -33,6 +36,8 @@ export default function Navigation() {
         </div>
         <div className="md:hidden w-full flex justify-end">
           <button
+            type="button"
+            aria-label="Hamburger menu"
             title="hamburger menu"
             onClick={() => {
               setIsOpen(!isOpen);
@@ -54,7 +59,7 @@ export default function Navigation() {
             className={`${pathname === "/pages/cart" ? "active" : ""} hover:text-primary hover:bg-secondary hover:rounded-full px-4 py-2`}
             href="/pages/cart"
           >
-            Cart (0)
+            Cart ({totalItems})
           </Link>
         </div>
       </nav>
