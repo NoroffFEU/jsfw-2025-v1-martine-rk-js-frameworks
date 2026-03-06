@@ -16,7 +16,8 @@ import { Product } from "../interfaces/product";
  */
 export function useProductFilters(products: Product[]) {
   const [currentPage, setCurrentPage] = useState(1);
-  const [selectedCategory, setSelectedCategory] = useState("All products");
+  const [selectedCategory, setSelectedCategory] =
+    useState<string>("All products");
   const [searchTerm, setSearchTerm] = useState("");
   const [sort, setSort] = useState("default");
   const [maxPrice, setMaxPrice] = useState<number>(4000);
