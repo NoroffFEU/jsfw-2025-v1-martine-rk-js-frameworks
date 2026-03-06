@@ -82,7 +82,7 @@ export default function ProductList({ products }: { products: Product[] }) {
                 step="50"
                 value={maxPrice}
                 onChange={(e) => setMaxPrice(Number(e.target.value))}
-                className="w-full"
+                className="w-full cursor-pointer"
               />
             </div>
           </div>
