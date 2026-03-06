@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import React, { useState } from "react";
 import { Menu } from "lucide-react";
-import useCartStore from "@/app/stores/cartstore";
+import TotalItems from "@/app/utils/totalItems";
 
 /**
  * Navigation component
@@ -16,8 +16,7 @@ import useCartStore from "@/app/stores/cartstore";
 export default function Navigation() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
-  const items = useCartStore((state) => state.items);
-  const totalItems = items.reduce((total, item) => total + item.quantity, 0);
+  const { totalItems } = TotalItems();
 
   return (
     <>

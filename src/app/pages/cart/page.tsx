@@ -7,6 +7,7 @@ import Link from "next/link";
 import useCartStore from "@/app/stores/cartstore";
 import QuantitySelector from "@/app/components/QuantitySelector";
 import PaymentMockUp from "./components/PaymentMockUp";
+import TotalItems from "@/app/utils/totalItems";
 
 /**
  * Cart Page.
@@ -31,13 +32,12 @@ export default function CartPage() {
   const updateQuantity = useCartStore((state) => state.updateQuantity);
   const removeItem = useCartStore((state) => state.removeItem);
   const clearCart = useCartStore((state) => state.clearCart);
+  const { totalItems } = TotalItems();
 
   const totalPrice = items.reduce(
     (price, item) => price + item.price * item.quantity,
     0
   );
-
-  const totalItems = items.reduce((total, item) => total + item.quantity, 0);
 
   const shipping = 4;
   const subtotal = totalPrice;
