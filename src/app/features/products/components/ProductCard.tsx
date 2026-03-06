@@ -5,25 +5,17 @@ import Image from "next/image";
 import { Star, BadgePercent } from "lucide-react";
 import { Product } from "@/app/interfaces/product";
 import QuantityAndAddToCartButtons from "@/app/components/QuantityAndAddToCart";
+import getDiscountInfo from "@/app/utils/getDiscountInfo";
 
 /**
- * ProductCard component displays single products with image, price, rating, tags, and a "add to cart" button.
- * Calculates and displays "%" icon and discount percentage on the top right of the product image, if the product has an discount.
+ * ProductCard component displays single products with image, price, rating, quantity selector and a "Add to cart" button.
+ * Displays "%" icon and discount percentage on the top right of the product image, if the product has an discount.
  * Displays current price and before price in lighter gray with strike through.
  *
  * @returns The product card UI
  */
 export default function ProductCard({ product }: { product: Product }) {
-  const hasDiscount =
-    product.discountedPrice != null && product.discountedPrice < product.price;
-
-  const discountPercentage =
-    product.discountedPrice && product.price > 0
-      ? (
-          ((product.price - product.discountedPrice) / product.price) *
-          100
-        ).toFixed(0)
-      : 0;
+  const { hasDiscount, discountPercentage } = getDiscountInfo(product);
 
   return (
     <li className="w-full p-4 flex flex-col gap-3">
@@ -33,6 +25,7 @@ export default function ProductCard({ product }: { product: Product }) {
             src={product.image.url || "/images/No-image-available.svg"}
             alt={product.image.alt || product.title}
             fill
+            loading="lazy"
             className="object-cover rounded-3xl"
             sizes="(max-width: 768px) 100vw, 33vw"
           />
@@ -65,17 +58,6 @@ export default function ProductCard({ product }: { product: Product }) {
             <p className="text-[1.125rem]">${product.price}</p>
           )}
         </div>
-
-        <p className="flex flex-wrap gap-2">
-          {product.tags.map((tag, index) => (
-            <span
-              key={index}
-              className="bg-gray-200 text-black px-2 py-1 rounded-full"
-            >
-              {tag}
-            </span>
-          ))}
-        </p>
 
         <div className="flex w-full gap-2 items-center">
           <p className="flex items-center gap-2">
