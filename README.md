@@ -111,6 +111,7 @@ Tool used: ChatGPT
 Date: 1 March 2026
 <br />
 Purpose: Asked what could be the cause of an error.
+<br />
 Outcome: Found out the problem was that I had forgotten “use client”.
 
 Tool used: Google AI
