@@ -38,7 +38,7 @@ export default function ProductCard({ product }: { product: Product }) {
 
           {hasDiscount && (
             <p
-              className="absolute top-2 right-2 bg-red-700 p-2 flex items-center gap-2 text-white rounded-full"
+              className="absolute top-2 right-2 bg-red-700 p-2 flex items-center gap-1 text-white rounded-full"
               title="Discount"
             >
               <BadgePercent size={20} />
