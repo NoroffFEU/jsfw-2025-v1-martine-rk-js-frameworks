@@ -13,7 +13,7 @@ export default function ProductLoading() {
   return (
     <div
       role="status"
-      className="flex flex-col h-screen items-center justify-center gap-4"
+      className="flex flex-col w-full h-screen items-center justify-center gap-4"
     >
       <div className="flex items-center gap-2">
         <div className="w-10 h-10 border-4 border-t-blue-500 border-gray-300 rounded-full animate-spin"></div>
