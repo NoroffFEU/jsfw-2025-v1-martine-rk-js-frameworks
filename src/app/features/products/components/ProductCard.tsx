@@ -16,10 +16,16 @@ import getDiscountInfo from "@/app/utils/getDiscountInfo";
  */
 export default function ProductCard({ product }: { product: Product }) {
   const { hasDiscount, discountPercentage } = getDiscountInfo(product);
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
 
   return (
     <li className="w-full p-4 flex flex-col gap-3">
-      <Link href={`/features/products/product/${product.id}`} scroll={true}>
+      <Link
+        href={`/features/products/product/${product.id}`}
+        onClick={scrollToTop}
+      >
         <div className="relative w-full aspect-square">
           <Image
             src={product.image.url || "/images/No-image-available.svg"}
