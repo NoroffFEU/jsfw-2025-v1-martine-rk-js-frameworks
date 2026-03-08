@@ -44,7 +44,7 @@ bun dev
 
 Before I begun with creating the online shop website, I created high-fideltiy prototypes in Figma. I started with the mobile-first approach and later created the desktop version. In addition, I created a design system for consistent design throughout the website.
 
-[Click here to open prototype](https://www.figma.com/design/4dW3fTp1S1C8q578PEWW9U/JavaScript-Frameworks-online-shop?node-id=1-2&t=UU7UeSd7ILNvUelF-1)
+[Prototype](https://www.figma.com/design/4dW3fTp1S1C8q578PEWW9U/JavaScript-Frameworks-online-shop?node-id=1-2&t=UU7UeSd7ILNvUelF-1)
 
 ## Live Website
 
@@ -61,6 +61,45 @@ Before I begun with creating the online shop website, I created high-fideltiy pr
 ## Known issues
 
 - Checkout input fields are not functional and are disabled, shown only for demonstration.
+
+## AI Usage
+
+During this course assignment I used AI as a guidance and helping tool.
+
+Tool used: ChatGPT
+Date: 16 February 2026
+Purpose: Get suggestions for name to the Online shop
+Outcome: Found a suitable name to use for the Online shop.
+
+Tool used: Stitch AI
+Date: 16 February 2026
+Purpose: Asked it to give examples on how to display products in an online shop.
+Outcome: It helped me get the ideas flowing, and gave me an idea starting point.
+
+Tool used: Claude AI
+Date: 20 February 2026
+Purpose: Asked for guidance on what could be the reason for that the Tailwind styling was not working/updating.
+Outcome: Got a suggestion to clear the Next.js build cache and restart with “npm run dev”, which solved the issue.
+
+Tool used: ChatGPT
+Date: 26 February 2026
+Purpose: Asked about a React error. Snippet from the error: “ A tree hydrated but some attributes of the server rendered HTML didn't match the client properties.“
+Outcome: Found out the cause of the error was from the extension Grammarly.
+
+Tool used: ChatGPT
+Date: 27 February 2026
+Purpose: Asked about a TypeScript error.
+Outcome: Explained the TypeScript error and provided examples of possible causes, which helped me solve the error.
+
+Tool used: ChatGPT
+Date: 1 March 2026
+Purpose: Asked what could be the cause of an error.
+Outcome: Found out the problem was that I had forgotten “use client”.
+
+Tool used: Google AI
+Date: 6 March 2026
+Purpose: Asked how to calculate the percentage of a discounted price.
+Outcome: Got the mathematical formula on how to calculate it.
 
 ## Placeholder text
 
