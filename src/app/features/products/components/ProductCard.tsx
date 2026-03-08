@@ -19,7 +19,7 @@ export default function ProductCard({ product }: { product: Product }) {
 
   return (
     <li className="w-full p-4 flex flex-col gap-3">
-      <Link href={`/features/products/product/${product.id}`}>
+      <Link href={`/features/products/product/${product.id}`} scroll={true}>
         <div className="relative w-full aspect-square">
           <Image
             src={product.image.url || "/images/No-image-available.svg"}
