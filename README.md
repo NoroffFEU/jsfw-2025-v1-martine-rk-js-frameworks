@@ -67,38 +67,58 @@ Before I begun with creating the online shop website, I created high-fideltiy pr
 During this course assignment I used AI as a guidance and helping tool.
 
 Tool used: ChatGPT
+<br />
 Date: 16 February 2026
-Purpose: Get suggestions for name to the Online shop
+<br />
+Purpose: Get suggestions for name to the Online shop.
+<br />
 Outcome: Found a suitable name to use for the Online shop.
 
 Tool used: Stitch AI
+<br />
 Date: 16 February 2026
+<br />
 Purpose: Asked it to give examples on how to display products in an online shop.
+<br />
 Outcome: It helped me get the ideas flowing, and gave me an idea starting point.
 
 Tool used: Claude AI
+<br />
 Date: 20 February 2026
+<br />
 Purpose: Asked for guidance on what could be the reason for that the Tailwind styling was not working/updating.
+<br />
 Outcome: Got a suggestion to clear the Next.js build cache and restart with “npm run dev”, which solved the issue.
 
 Tool used: ChatGPT
+<br />
 Date: 26 February 2026
+<br />
 Purpose: Asked about a React error. Snippet from the error: “ A tree hydrated but some attributes of the server rendered HTML didn't match the client properties.“
+<br />
 Outcome: Found out the cause of the error was from the extension Grammarly.
 
 Tool used: ChatGPT
+<br />
 Date: 27 February 2026
+<br />
 Purpose: Asked about a TypeScript error.
+<br />
 Outcome: Explained the TypeScript error and provided examples of possible causes, which helped me solve the error.
 
 Tool used: ChatGPT
+<br />
 Date: 1 March 2026
+<br />
 Purpose: Asked what could be the cause of an error.
 Outcome: Found out the problem was that I had forgotten “use client”.
 
 Tool used: Google AI
+<br />
 Date: 6 March 2026
+<br />
 Purpose: Asked how to calculate the percentage of a discounted price.
+<br />
 Outcome: Got the mathematical formula on how to calculate it.
 
 ## Placeholder text
