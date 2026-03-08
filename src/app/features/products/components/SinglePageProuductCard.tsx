@@ -60,7 +60,7 @@ export default function SinglePageProduct({ product }: { product: Product }) {
                 </p>
               </div>
             </div>
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-1 mt-2">
               {hasDiscount ? (
                 <>
                   <p className="text-[1.125rem]">${product.discountedPrice}</p>
