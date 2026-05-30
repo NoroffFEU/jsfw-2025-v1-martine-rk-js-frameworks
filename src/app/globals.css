@@ -5,6 +5,10 @@
   font-family: "Inter Variable", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @theme {
   --color-primary: rgb(250, 250, 246);
   --color-secondary: rgb(51, 51, 51);
