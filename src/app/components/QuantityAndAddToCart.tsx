@@ -22,7 +22,7 @@ export default function QuantityAndAddToCartButtons({
   const [quantity, setQuantity] = useState(1);
 
   return (
-    <>
+    <div className="flex flex-col gap-2">
       <QuantitySelector quantity={quantity} setQuantity={setQuantity} />
       <button
         type="button"
@@ -33,6 +33,6 @@ export default function QuantityAndAddToCartButtons({
         <ShoppingCart />
         Add to cart
       </button>
-    </>
+    </div>
   );
 }
