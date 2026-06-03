@@ -1,6 +1,10 @@
 # JavaScript Framworks Course Assignment
 
-Martine Reppesgård Karlsen
+![Netlify Status](https://api.netlify.com/api/v1/badges/dfe67612-5f4f-4bb5-adb4-42d666e0c68d/deploy-status)
+
+Hello there! 👋🏼
+
+My name is Martine Reppesgård Karlsen.
 
 ## Brief
 
@@ -22,13 +26,17 @@ The application allows users to:
 
 ## Getting Started
 
-### Install dependencies:
+### Installation
+
+Clone the repository and install dependencies:
 
 ```bash
+git clone https://github.com/NoroffFEU/jsfw-2025-v1-martine-rk-js-frameworks.git
+cd jsfw-2025-v1-martine-rk-js-frameworks
 npm install
 ```
 
-### Run the development server:
+### Run the development server
 
 ```bash
 npm run dev
@@ -49,6 +57,10 @@ Before I begun with creating the online shop website, I created high-fideltiy pr
 ## Live Website
 
 [Live website](https://theselection.netlify.app/)
+
+## 📸 Website Preview
+
+![Preview of The selection](/public/images/preview.png)
 
 ## Technology stack
 
